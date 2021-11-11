@@ -1,0 +1,10 @@
+pipelines:
+  - name: TestJob
+    steps:
+      - name: testStep
+        type: Jenkins
+        configuration:
+          #inherits all the tags from bash; https://www.jfrog.com/confluence/display/JFROG/Bash
+          jenkinsJobName: tbd            # Jenkins job/pipeline name
+          integrations:
+            - name: devJenkins  # required Jenkins integration
